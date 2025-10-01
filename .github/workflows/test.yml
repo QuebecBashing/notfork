@@ -1,0 +1,13 @@
+on:
+  workflow_dispatch:
+    inputs:
+      a:
+
+jobs:
+  a:  
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:  
+          ref: ${{ github.event.inputs.a }}
